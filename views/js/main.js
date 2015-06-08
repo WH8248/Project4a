@@ -529,7 +529,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 15; i++) {   // lowered for loop of pizza rendered from 200 to 15 for improved preformance
+  for (var i = 0; i < 30; i++) {   // lowered for loop of pizza rendered from 200 to 30 for improved preformance
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
