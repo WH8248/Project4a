@@ -6,9 +6,10 @@ To check the optimizations made open views/pizza at the Github site - https://gi
 views/js/main.js:
 1. In function updatePositions, I moved the scroll calculation (document.body.scrollTop / 1250) out of the for loop to avoid recalulating it over and over when the value stayed the same, and declared var phase outside loop
 2. Lowered the for loop that rendered the pizzas that move accors the screen from 200 to 30 to avoid creating pizzas that were not visable.
-3. For function changePizzaSizes moved document.querySelectorAll(".randomPizzaContainer").length outside the loop as well as declaring var dx, newwidth
+3. For function changePizzaSizes moved document.querySelectorAll(".randomPizzaContainer").length outside the loop as well as var dx, newwidth
 4. (540) var elem moved declare outside loop
 5. (475) var pizzasDiv = document.getElementById("randomPizzas") moved outside the for loop to make only 1 DOM call
+6. changed document.querySelectorAll to getElementsByClassName
 
 index.html:
 1. fixed font error by inlining and updated the style css

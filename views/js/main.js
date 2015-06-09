@@ -449,16 +449,14 @@ var resizePizzas = function(size) {
   }
 
   // Iterates through pizza elements on the page and changes their widths
-  var dx, newwidth;  // moved declare outside loop
-  var pizzaContainerLength = document.querySelectorAll(".randomPizzaContainer").length; // moved out of loop
+  var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[0], size);  // cahnged from document.querySelectorAll
+  var newwidth = (document.getElementsByClassName("randomPizzaContainer")[0].offsetWidth + dx) + 'px';  // moved declare outside loop
+  var pizzaContainerLength = document.getElementsByClassName("randomPizzaContainer").length; // moved out of loop// cahnged from document.querySelectorAll
   function changePizzaSizes(size) {
-    for (var i = 0; i < pizzaContainerLength; i++) {
-      dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+    for (var i = 0; i < pizzaContainerLength; i++) {      
+      document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;// cahnged from document.querySelectorAll
     }
   }
-
   changePizzaSizes(size);
 
   // User Timing API is awesome
@@ -504,7 +502,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-  var items = document.querySelectorAll('.mover'); //getting pizza here
+  var items = document.getElementsByClassName('mover'); //getting pizza here, cahnged from document.querySelectorAll
   var scrollCalc = document.body.scrollTop / 1250; //Moved calculation outside of for loop for preformence 
   var phase; // moved declare outside loop
 
