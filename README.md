@@ -13,6 +13,9 @@ views/js/main.js:
 
 index.html:
 1. fixed font error by inlining and updated the style css
+2. inlined the css
+3.fixed line 79
+4. added async to line 90
 
 css:
 For View
