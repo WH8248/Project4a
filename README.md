@@ -20,9 +20,10 @@ index.html:
 css:
 For View
 to .mover added transform attributes
+Minifyed Css file
 
 pizza.html
-reduced size of pizzaria image
+Compressed all images with Tinypng
 
 
 References used:
@@ -33,3 +34,6 @@ Github
 w3schools
 https://css-tricks.com/almanac/properties/t/transform/
 https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
+http://jscompress.com/
+http://cssminifier.com/
+https://tinypng.com/
